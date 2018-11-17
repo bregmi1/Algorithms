@@ -34,6 +34,7 @@ public class ArrayList{
             throw new IndexOutOfBoundsException("Index " + index + " is out of bound.");
         }
         int temp = array[index];
+
         for(int i= index; i < size-1; i++){
             array[i] = array[i+1];
         }
@@ -56,7 +57,7 @@ public class ArrayList{
         return this.size;
     }
 
-    public void expandArray(int originalSize){
+    private void expandArray(int originalSize){
         int newSize = 0;
         if(originalSize < 2){
             newSize = 2;
