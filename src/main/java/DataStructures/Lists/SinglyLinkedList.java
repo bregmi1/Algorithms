@@ -55,6 +55,7 @@ public class SinglyLinkedList {
         Node returnValue = head;
         while(index > 0){
             returnValue = returnValue.getNext();
+            index--;
         }
         return returnValue.getValue();
     }
@@ -75,12 +76,17 @@ public class SinglyLinkedList {
             while(index > 1){
                 prev = current;
                 current = current.getNext();
+                index--;
             }
             returnValue = current.getValue();
             prev.setNext(current.getNext());
         }
         size--;
         return returnValue;
+    }
+
+    public int getSize(){
+        return this.size;
     }
 
     private class Node{
