@@ -1,6 +1,6 @@
 package problems.arraysAndStrings;
 
-//Problem taken from Cracking the Code Interview Sixth Edition (Problem 1.1)
+//Problem taken from Cracking the Code Interview Sixth Edition (Problem 1.2)
 //Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
 
 import java.util.HashMap;

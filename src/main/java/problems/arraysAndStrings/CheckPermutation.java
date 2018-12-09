@@ -7,6 +7,8 @@ import java.util.HashMap;
 
 public class CheckPermutation {
 
+    // Runtime Complexity: O(a) where a is the greater value of the two string lengths
+    // Space Complexity: O(c) where c is the number of characters (For english alphabets it is 26)
     public static boolean checkPermutation(String str1, String str2){
         HashMap<Character, Integer> map1 = characterCount(str1);
         HashMap<Character, Integer> map2 = characterCount(str2);
@@ -14,6 +16,8 @@ public class CheckPermutation {
     }
 
 
+    // Runtime Complexity: O(n)
+    // Space Complexity: O(c) where c is the number of characters (For english alphabets it is 26)
     public static HashMap<Character, Integer> characterCount(String string){
         HashMap<Character, Integer> map = new HashMap<>();
 
