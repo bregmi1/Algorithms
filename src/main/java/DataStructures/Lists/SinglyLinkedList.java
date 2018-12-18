@@ -3,8 +3,8 @@ package DataStructures.Lists;
 // A simple integer based SinglyLinkedList
 
 public class SinglyLinkedList {
-    private Node head;
-    private Node tail;
+    private SinglyLinkedNode head;
+    private SinglyLinkedNode tail;
     private int size;
 
     public SinglyLinkedList(){
@@ -13,17 +13,17 @@ public class SinglyLinkedList {
     }
 
     public SinglyLinkedList(int value){
-        head = new Node(value);
+        head = new SinglyLinkedNode(value);
         tail = head;
         size = 1;
     }
 
     public boolean add(int item){
         if(head == null){
-            head = new Node(item);
+            head = new SinglyLinkedNode(item);
             tail = head;
         } else{
-            Node temp = new Node(item);
+            SinglyLinkedNode temp = new SinglyLinkedNode(item);
             tail.setNext(temp);
             tail = temp;
         }
@@ -37,7 +37,7 @@ public class SinglyLinkedList {
     }
 
     public boolean contains(int value){
-        Node temp = head;
+        SinglyLinkedNode temp = head;
         while(temp != null){
             if(temp.getValue() == value){
                 return true;
@@ -52,7 +52,7 @@ public class SinglyLinkedList {
             throw new IndexOutOfBoundsException("Index: " + index + " is out of bound");
         }
 
-        Node returnValue = head;
+        SinglyLinkedNode returnValue = head;
         while(index > 0){
             returnValue = returnValue.getNext();
             index--;
@@ -70,8 +70,8 @@ public class SinglyLinkedList {
             returnValue = head.getValue();
             head = head.getNext();
         } else{
-            Node prev = head;
-            Node current = head.getNext();
+            SinglyLinkedNode prev = head;
+            SinglyLinkedNode current = head.getNext();
 
             while(index > 1){
                 prev = current;
@@ -89,32 +89,5 @@ public class SinglyLinkedList {
         return this.size;
     }
 
-    private class Node{
-        private int value;
-        private Node next;
 
-        public Node(int value){
-            this.value = value;
-        }
-
-        public int getValue() {
-            return value;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
-        }
-
-        public void setNext(Node next) {
-            this.next = next;
-        }
-
-        public boolean hasNext(){
-            return next != null;
-        }
-    }
 }
