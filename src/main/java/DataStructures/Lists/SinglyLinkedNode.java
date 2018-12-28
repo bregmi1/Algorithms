@@ -1,5 +1,7 @@
 package DataStructures.Lists;
 
+import problems.linkedLists.Partition;
+
 public class SinglyLinkedNode {
     private int value;
     private SinglyLinkedNode next;
@@ -61,7 +63,6 @@ public class SinglyLinkedNode {
                 otherNode= otherNode.getNext();
             }
         }
-
         return (otherNode == null);
     }
 
