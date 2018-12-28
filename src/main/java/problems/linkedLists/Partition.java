@@ -2,7 +2,7 @@ package problems.linkedLists;
 
 import DataStructures.Lists.SinglyLinkedNode;
 
-// Cracking the Code Interview Sixth Edition (Problem 2.3)
+// Cracking the Code Interview Sixth Edition (Problem 2.4)
 // Write code to partition a linked list around a value x, such that all nodes less than x come
 // before all the nodes greater than or equal to x.
 // If x is contained withing the list, the values of x only need to be after the elements less than x (see below).
